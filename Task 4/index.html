@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sunny Notes — Personal Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-badge" aria-hidden="true">🟨</span>
+      <h1 class="brand-title">Sunny Notes</h1>
+    </div>
+    <p class="brand-tagline">Tech • Travel • Food — thoughts in a sunny tone</p>
+  </header>
+
+  <!-- Controls -->
+  <section class="toolbar" aria-label="Blog controls">
+    <label class="field">
+      <span class="label">Category</span>
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="all">All</option>
+        <option value="Tech">Tech</option>
+        <option value="Travel">Travel</option>
+        <option value="Food">Food</option>
+      </select>
+    </label>
+
+    <label class="field field-grow">
+      <span class="label">Search title</span>
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Type a title keyword…"
+        aria-label="Search posts by title"
+      />
+    </label>
+
+    <div class="pagination">
+      <button id="prevBtn" class="btn" aria-label="Previous page">← Prev</button>
+      <span id="pageInfo" class="page-info" aria-live="polite">Page 1 of 1</span>
+      <button id="nextBtn" class="btn" aria-label="Next page">Next →</button>
+    </div>
+  </section>
+
+  <!-- Posts Grid -->
+  <main class="posts" id="posts" aria-live="polite"></main>
+
+  <!-- Empty State -->
+  <template id="emptyTemplate">
+    <div class="empty">
+      <h2>No posts found</h2>
+      <p>Try a different category or search keyword.</p>
+    </div>
+  </template>
+
+  <!-- Card Template -->
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="card-media">
+        <img src="" alt="" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <p class="card-desc"></p>
+      </div>
+      <div class="card-meta">
+        <span class="chip chip-category"></span>
+        <time class="chip chip-date" datetime=""></time>
+      </div>
+    </article>
+  </template>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Sunny Notes — built with HTML, CSS & JS</small>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
