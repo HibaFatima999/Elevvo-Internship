@@ -1,0 +1,91 @@
+/* Yellow full screen background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9c51c; /* Yellow */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Center white form box */
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* Labels and inputs */
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Error message style */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Success message style */
+.success-message {
+  color: green;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+  display: block;
+  font-weight: bold;
+}
+
+/* Submit button */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Responsive on mobile */
+@media (max-width: 500px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  form h1 {
+    font-size: 24px;
+  }
+}
