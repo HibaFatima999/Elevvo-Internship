@@ -1,0 +1,204 @@
+:root{
+  --yellow:#f9c51c; 
+  --black:#111111;
+  --text:#1a1a1a;
+  --muted:#666;
+  --white:#ffffff;
+  --card:#fff;
+  --shadow:0 10px 25px rgba(17,17,17,.08);
+  --radius:16px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Poppins,system-ui,Segoe UI,Arial,sans-serif;
+  color:var(--text);
+  background:var(--white);
+  line-height:1.5;
+}
+
+/* Containers & layout helpers */
+.container{
+  width:min(1100px,92%);
+  margin-inline:auto;
+}
+
+.section{
+  padding:72px 0;
+  background:var(--white);
+}
+.section--alt{
+  background:var(--yellow); /* Changed to yellow */
+}
+.section__title{
+  text-align:center;
+  font-size:clamp(1.4rem,3vw,2rem);
+  margin:0 0 28px;
+  font-weight:700;
+}
+
+.grid{
+  display:grid;
+  gap:22px;
+}
+.grid--3{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+@media (max-width: 900px){
+  .grid--3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 640px){
+  .grid--3{grid-template-columns:1fr}
+}
+
+/* HERO */
+.hero{
+  background:var(--yellow);
+  padding:50px 0 90px;
+  position:relative;
+  overflow:hidden;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.brand__icon{font-size:28px;color:var(--black)}
+.brand__name{font-weight:700;font-size:20px;color:var(--black)}
+
+.hero__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand--center {
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.brand__name--big {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+}
+
+.hero__center-text h1 {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+}
+
+.hero__center-text p {
+  font-size: 1rem;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.hero__cta{display:flex; gap:12px; flex-wrap:wrap; justify-content:center}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  transition:transform .15s ease, box-shadow .15s ease;
+  border:2px solid transparent;
+}
+.btn:active{transform:translateY(1px)}
+.btn--dark{background:var(--black); color:var(--white)}
+.btn--dark:hover{box-shadow:0 8px 18px rgba(0,0,0,.25)}
+.btn--ghost{background:transparent; color:var(--black); border-color:var(--black)}
+.btn--ghost:hover{background:rgba(0,0,0,.1)}
+.btn--outline{background:transparent; color:var(--black); border-color:var(--black)}
+.btn--outline:hover{background:rgba(0,0,0,.06)}
+
+/* Cards */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+.card__icon{
+  font-size:28px;
+  color:var(--black);
+  background:#fff3a1;
+  width:48px;height:48px;display:grid;place-items:center;border-radius:12px;
+  margin-bottom:10px;
+}
+.card h3{margin:6px 0 6px;font-size:1.1rem}
+.card p{color:var(--muted);margin:0}
+
+/* Quotes */
+.quote{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+.quote blockquote{margin:0 0 8px; font-weight:600}
+.quote figcaption{color:var(--muted)}
+
+/* Pricing */
+.price-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:26px;
+  box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:14px;
+}
+.price-card--featured{
+  outline:3px solid var(--black);
+  transform:translateY(-6px);
+}
+.price-card h3{margin:0}
+.price{
+  font-weight:700; font-size:1.8rem; margin:0;
+}
+.price span{font-weight:600; font-size:.9rem; color:var(--muted)}
+.price__list{list-style:none; padding:0; margin:0; display:grid; gap:8px}
+.price__list i{color:var(--black); margin-right:6px}
+
+/* Footer */
+.footer{
+  background:var(--black);
+  color:#ddd;
+  padding:26px 0;
+}
+.footer__inner{
+  display:grid;
+  grid-template-columns:1fr auto auto;
+  align-items:center;
+  gap:16px;
+}
+.footer__links a,
+.footer__social a{
+  color:#ddd;
+  text-decoration:none;
+  margin-right:14px;
+}
+.footer__social a:hover{color:#fff}
+@media (max-width:800px){
+  .footer__inner{grid-template-columns:1fr; text-align:center; gap:6px}
+}
+
+/* Reveal on scroll */
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .6s ease, transform .6s ease;
+  transition-delay:var(--d, 0ms);
+}
+.reveal.in{
+  opacity:1;
+  transform:none;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal, .reveal.in{transition:none; transform:none; opacity:1}
+}

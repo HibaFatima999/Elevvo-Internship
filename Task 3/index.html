@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaskFlow — Organize Your Day</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta name="description" content="TaskFlow helps you capture, prioritize, and complete tasks with ease.">
+</head>
+<body>
+  <!-- HEADER / HERO -->
+  <header class="hero" id="home">
+    <div class="container hero__inner hero__center">
+      <div class="brand brand--center">
+        <i class="fa-solid fa-check-double brand__icon"></i>
+        <span class="brand__name brand__name--big">TaskFlow</span>
+      </div>
+
+      <div class="hero__copy hero__center-text">
+        <h1 class="reveal">Organize your tasks. <span class="hero__highlight">Own your day.</span></h1>
+        <p class="reveal" style="--d:120ms">
+          TaskFlow keeps everything in one place—so you can focus on what matters most.
+        </p>
+        <div class="hero__cta reveal" style="--d:240ms">
+          <a class="btn btn--dark" href="#pricing">Get Started</a>
+          <a class="btn btn--ghost" href="#features">See Features</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section__title reveal">Powerful features, simple to use</h2>
+
+      <div class="grid grid--3">
+        <article class="card reveal">
+          <i class="fa-solid fa-list-check card__icon"></i>
+          <h3>Smart Lists</h3>
+          <p>Create tasks, add due dates, and keep priorities clear with color tags.</p>
+        </article>
+
+        <article class="card reveal" style="--d:120ms">
+          <i class="fa-solid fa-bell card__icon"></i>
+          <h3>Reminders</h3>
+          <p>Never miss a deadline with gentle notifications across devices.</p>
+        </article>
+
+        <article class="card reveal" style="--d:240ms">
+          <i class="fa-solid fa-people-group card__icon"></i>
+          <h3>Team Sharing</h3>
+          <p>Share lists, assign tasks, and track progress together in real time.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section--alt" id="testimonials">
+    <div class="container">
+      <h2 class="section__title reveal">Loved by productive people</h2>
+
+      <div class="grid grid--3">
+        <figure class="quote reveal">
+          <blockquote>“TaskFlow turned chaos into calm. I get more done with less stress.”</blockquote>
+          <figcaption>— Ayesha K.</figcaption>
+        </figure>
+
+        <figure class="quote reveal" style="--d:120ms">
+          <blockquote>“My team finally has one place for tasks, comments, and deadlines.”</blockquote>
+          <figcaption>— Daniel M.</figcaption>
+        </figure>
+
+        <figure class="quote reveal" style="--d:240ms">
+          <blockquote>“I open TaskFlow every morning. It’s my roadmap for the day.”</blockquote>
+          <figcaption>— Priya S.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section__title reveal">Simple, transparent pricing</h2>
+
+      <div class="grid grid--3">
+        <article class="price-card reveal">
+          <h3>Free</h3>
+          <p class="price">$0<span>/mo</span></p>
+          <ul class="price__list">
+            <li><i class="fa-solid fa-check"></i> Up to 3 projects</li>
+            <li><i class="fa-solid fa-check"></i> Basic reminders</li>
+            <li><i class="fa-solid fa-check"></i> Mobile & web</li>
+          </ul>
+          <a href="#" class="btn btn--outline">Start Free</a>
+        </article>
+
+        <article class="price-card price-card--featured reveal" style="--d:120ms">
+          <div class="badge">Most Popular</div>
+          <h3>Pro</h3>
+          <p class="price">$8<span>/mo</span></p>
+          <ul class="price__list">
+            <li><i class="fa-solid fa-check"></i> Unlimited projects</li>
+            <li><i class="fa-solid fa-check"></i> Advanced reminders</li>
+            <li><i class="fa-solid fa-check"></i> Priority support</li>
+          </ul>
+          <a href="#" class="btn btn--dark">Go Pro</a>
+        </article>
+
+        <article class="price-card reveal" style="--d:240ms">
+          <h3>Team</h3>
+          <p class="price">$15<span>/user/mo</span></p>
+          <ul class="price__list">
+            <li><i class="fa-solid fa-check"></i> Shared workspaces</li>
+            <li><i class="fa-solid fa-check"></i> Roles & permissions</li>
+            <li><i class="fa-solid fa-check"></i> Admin dashboard</li>
+          </ul>
+          <a href="#" class="btn btn--outline">Contact Sales</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> TaskFlow. All rights reserved.</p>
+      <nav class="footer__links">
+        <a href="mailto:hello@taskflow.app">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="footer__social">
+        <a aria-label="Twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a aria-label="LinkedIn" href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
